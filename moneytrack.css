@@ -1,0 +1,501 @@
+/* Definição de Variáveis (Esquema de Cores Moderno) */
+:root {
+    --primary-color: #00875F; /* Verde Mais Vibrante/Moderno (Brand) */
+    --secondary-color: #E6FAF1; /* Verde Muito Claro (Fundo/Destaque Suave) */
+    --accent-color: #740087; /* Laranja VIBRANTE (Ação/CTA) */
+    --background-light: #F9F9F9; /* Fundo mais suave */
+    --text-dark: #2C3E50; /* Texto principal em azul escuro para melhor legibilidade */
+    --shadow-soft: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para os cards */
+    --transition-speed: 0.3s;
+}
+
+/* 1. Base e Tipografia */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6; 
+}
+
+h1{
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 3.5em; /* Ligeiramente maior */
+}
+
+h2, h3 {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-top: 0;
+}
+
+p {
+    color: var(--text-dark);
+    margin-bottom: 1em;
+}
+
+/* Elementos de Ação (Unificados) */
+.cta-button {
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 30px; 
+    border-radius: 25px; 
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #e65c2b; 
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 2. Cabeçalho (Hero Section Moderna) */
+header {
+    /* Mantenha a imagem de fundo ou defina uma cor sólida para simplificar */
+    background-image: url(MoneyTrack_BackGround.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #FFFFFF;
+    height: 60vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+    padding: 0; 
+}
+
+header::before {
+    /* Mantendo o overlay de cor */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 135, 95, 0.6); 
+    z-index: 1;
+}
+
+header h1, header .slogan, .auth-buttons {
+    position: relative;
+    z-index: 2;
+}
+
+.slogan {
+    font-style: italic;
+    font-size: 1.5em; 
+    font-weight: 300;
+    margin-top: 5px;
+    color: var(--secondary-color);
+    background: linear-gradient(90deg, var(--accent-color) 0%, #e65c2b 100%);
+    box-shadow: 0 10px 24px rgba(231, 80, 39, 0.16);
+    border: none;
+    transition: transform 160ms ease, box-shadow 160ms ease;; 
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 25px; 
+    cursor: pointer;
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Botões de Autenticação (Posicionamento e Estilo Moderno) */
+.auth-buttons {
+    position: absolute; 
+    top: 30px; 
+    right: 30px;
+    display: flex; 
+    gap: 15px; 
+}
+
+/* Botão de Login (Principal) */
+.auth-btn {
+    background-color: var(--accent-color); 
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 25px; 
+    cursor: pointer;
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.auth-btn:hover {
+    background-color: #e65c2b; 
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Botão Secundário (Cadastrar-se) */
+.btn-signin {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    box-shadow: none;
+}
+
+.btn-signin:hover {
+    background-color: rgba(255, 255, 255, 0.15); 
+    color: #ffffff;
+    border-color: #e65c2b;
+}
+
+/* 3. Navegação (Sticky e Limpa) */
+nav {
+    position: sticky; 
+    top: 0;
+    z-index: 900; 
+    background-color: #FFFFFF; 
+    display: flex;
+    justify-content: center;
+    padding: 0; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.nav-link { /* Usando classe no lugar de 'nav a' */
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 18px 25px; 
+    font-weight: 500;
+    transition: background-color var(--transition-speed), color var(--transition-speed), border-bottom var(--transition-speed);
+    border-bottom: 3px solid transparent; 
+    display: flex; /* Para alinhar o ícone */
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-link:hover,
+.nav-link.active-link { 
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color); 
+}
+
+/* 4. Seções de Conteúdo (Cards Modernos) */
+main {
+    padding: 40px;
+    max-width: 1200px; /* Um pouco mais de largura */
+    margin: 40px auto; 
+    min-height: calc(100vh - 250px); 
+}
+
+.section {
+    display: none;
+    padding: 40px;
+    margin-bottom: 30px;
+    background-color: #FFFFFF;
+    border-radius: 16px; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05); 
+}
+
+.section.active {
+    display: block;
+    animation: slideIn 0.4s ease-out; 
+}
+
+.section h2 {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px; 
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Cartões de Recursos (Layout Flexbox e Design) */
+.feature-cards {
+    text-align: left;
+}
+
+.feature-cards h3 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.feature-cards > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.card {
+    flex: 1;
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    border-left: 5px solid var(--primary-color); /* Destaque lateral */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    font-size: 3em;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.card h4 {
+    color: var(--text-dark);
+    margin-top: 0;
+    font-weight: 600;
+}
+/* Modal centering and visual tweaks */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 10, 10, 0.45);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.modal.open {
+    display: flex;
+    animation: fadeInModal 220ms ease forwards;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    border-radius: 14px;
+    max-width: 520px;
+    width: 100%;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    box-shadow: 0 18px 48px rgba(2, 18, 26, 0.18);
+    padding: 2rem;
+    position: relative;
+    transform-origin: center;
+    transform: translateY(-10px) scale(0.995);
+    transition: transform 240ms cubic-bezier(.2,.9,.2,1), box-shadow 240ms;
+}
+
+.modal.open .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+/* Header inside modal */
+.modal-content #modalTitle {
+    margin: 0 0 8px 0;
+    font-size: 1.35rem;
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Form layout */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* Input styling */
+.modal-content input[type="email"],
+.modal-content input[type="password"],
+.modal-content input[type="text"] {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid #E9EEF3;
+    background: #FFF;
+    font-size: 0.97rem;
+    color: var(--text-dark);
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,0.02);
+}
+
+.modal-content input::placeholder {
+    color: #9AA6B2;
+}
+
+.modal-content input:focus {
+    outline: none;
+    border-color: rgba(0,135,95,0.9);
+    box-shadow: 0 10px 30px rgba(0,135,95,0.08);
+}
+
+/* Signin fields card */
+.signin-fields {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 8px 0;
+}
+
+/* CTA button in modal — gradient and full width */
+.modal-content .cta-button {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--accent-color) 0%, #e65c2b 100%);
+    box-shadow: 0 10px 24px rgba(231, 80, 39, 0.16);
+    border: none;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.modal-content .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(231, 80, 39, 0.18);
+}
+
+/* Close button */
+.close-modal {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    background: rgba(12,12,12,0.06);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-dark);
+    transition: background var(--transition-speed);
+}
+
+.close-modal:hover {
+    background: rgba(12,12,12,0.1);
+}
+
+/* Message (error/success) */
+.message {
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    min-height: 20px;
+    margin-top: 6px;
+    color: #e65c2b; /* erro por padrão; ajuste dinamicamente via JS se necessário */
+}
+
+/* Switch links */
+.switch-mode-text-login,
+.switch-mode-text-signin {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: #6B7A86;
+}
+
+.switch-mode-text-login a,
+.switch-mode-text-signin a {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Mobile tweaks */
+@media (max-width: 420px) {
+    .modal-content {
+        padding: 1rem;
+        border-radius: 12px;
+        max-width: 96%;
+    }
+    .modal-content #modalTitle {
+        font-size: 1.15rem;
+    }
+    .close-modal { right: 10px; top: 10px; width:36px; height:36px; }
+}
+
+.hidden-field {
+    display: none; /* Oculta campos de cadastro por padrão */
+}
+
+/* Estilo para a mensagem de erro/sucesso */
+.message {
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 500;
+    height: 20px; /* Reserva espaço para evitar pulos de layout */
+}
+
+.switch-mode-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.switch-mode-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* 6. Rodapé e Responsividade */
+footer {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 25px; 
+}
+
+.brand {
+    color: var(--secondary-color); 
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 900px) {
+    .feature-cards > div {
+        flex-direction: column;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* ... (outras regras de responsividade que já estavam boas) ... */
+    
+    .auth-buttons {
+        position: relative; /* Remove a posição absoluta */
+        top: auto;
+        right: auto;
+        margin-top: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyTrack - Educação Financeira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="moneytrack.css">
+    <script src="moneytrack.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <header>
+        <h1>MoneyTrack</h1>
+        <p class="slogan">Educação Financeira para Todos</p>
+        
+        <div class="auth-buttons">
+            <button id="login-btn" class="auth-btn btn-login" aria-controls="authModal">Login</button>
+            <button id="signin-btn" class="auth-btn btn-signin" aria-controls="authModal">Cadastrar-se</button>
+        </div>
+    </header>
+    
+    <nav role="navigation" aria-label="Navegação Principal">
+        <a href="#home" class="nav-link active-link" aria-current="page"><i class="fas fa-home"></i> Inicial</a>
+        <a href="#proximos-passos" class="nav-link">O que vem por aí?</a>
+    </nav>
+    
+    <div id="authModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <button id="close-modal-btn" class="close-modal" aria-label="Fechar Modal">&times;</button>
+            <h2 id="modalTitle">Login</h2>
+            
+            <form id="authForm">
+                <input type="email" id="email" placeholder="E-mail" required>
+                <div class="signin-fields hidden-field">
+                    <input type="text" id="username-signin" placeholder="Nome de Usuário" >
+                    <input type="password" id="confirmPassword" placeholder="Confirmar Senha" >
+                </div>
+                
+                <input type="password" id="password" placeholder="Senha" required>
+                
+                <button type="submit" id="auth-submit-btn" class="cta-button">Entrar</button>
+            </form>
+            
+            <p id="authMessage" role="alert" class="message"></p>
+            
+            <p class="switch-mode-text-login">
+                Ja tem conta? <a href="#" id="switch-to-signin">Log-in</a>
+            </p>
+            <p class="switch-mode-text-signin">
+                Não tem conta? <a href="#" id="switch-to-signin">Cadastre-se</a>
+            </p>
+
+        </div>
+    </div>
+    
+    <main>
+        <div id="home" class="section active">
+            <h2>Assuma o Controle da Sua Vida Financeira</h2>
+            <p class="intro-text">Acreditamos que controlar o dinheiro não precisa ser complicado. Oferecemos informação simples, prática e acessível para você organizar suas finanças, evitar dívidas e planejar seu futuro.</p>
+            
+            <a href="#" id="cta-home-btn" class="cta-button link-cta">Comece a Mudar Sua História Financeira Agora!</a>
+        </div>
+
+        <section id="proximos-passos" class="feature-cards">
+            <h3>O que o MoneyTrack preparou para você:</h3>
+            
+            <div class="card">
+                <i class="fas fa-chalkboard-teacher card-icon"></i>
+                <h4>Aulas de Finanças</h4>
+                <p>Conteúdo educativo, do básico ao avançado, para construir uma base sólida. **Em Breve!**</p>
+            </div>
+            
+            <div class="card">
+                <i class="fas fa-calculator card-icon"></i>
+                <h4>Planilha Interativa</h4>
+                <p>Uma ferramenta simples para rastrear gastos, orçamentos e entender para onde seu dinheiro está indo. **Futuramente!**</p>
+            </div>
+            
+            <div class="card">
+                <i class="fas fa-chart-line card-icon"></i>
+                <h4>Guia de Investimentos</h4>
+                <p>Aprenda a investir de forma segura e educada, focando em objetivos de longo prazo. **Novidades em breve!**</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p class=brand>&copy; MoneyTrack. Educação Financeira para Todos. <span id="currentYear"></span></p>
+    </footer>
+</body>
+</html>
